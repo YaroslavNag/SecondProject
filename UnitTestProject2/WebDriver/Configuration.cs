@@ -4,14 +4,14 @@ using System.Text;
 
 namespace UnitTestProject2.WebDriver
 {
-    class Configuration
+    public class Configuration
     {
         public static string GetEnviromentVar(string var, string defaultValue)
         {
             return ConfigurationManager.AppSettings[var] ?? defaultValue;
         }
 
-        public static string ElementTimeout => GetEnviromentVar("ElementTimeout", "10");
+        public static string ElementTimeout => GetEnviromentVar("ElementTimeout", "30");
 
         public static string Browser => GetEnviromentVar("Browser", "Chrome");
 

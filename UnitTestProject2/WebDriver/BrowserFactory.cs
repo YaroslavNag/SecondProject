@@ -24,7 +24,7 @@ namespace UnitTestProject2.WebDriver
             {
                 case BrowserType.Chrome:
                     {
-                        var service = ChromeDriverService.CreateDefaultService();
+                        var service = ChromeDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject1\UnitTestProject1\bin\Debug\netcoreapp2.1");
                         var option = new ChromeOptions();
                         option.AddArgument("disable-infobars");
                         driver = new ChromeDriver(service, option, TimeSpan.FromSeconds(timeOutSec));
@@ -32,7 +32,7 @@ namespace UnitTestProject2.WebDriver
                     }
                 case BrowserType.Firefox:
                     {
-                        var service = FirefoxDriverService.CreateDefaultService();
+                        var service = FirefoxDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject1\UnitTestProject1\bin\Debug\netcoreapp2.1");
                         var option = new FirefoxOptions();
                         driver = new FirefoxDriver(service, option, TimeSpan.FromSeconds(timeOutSec));
                         break;

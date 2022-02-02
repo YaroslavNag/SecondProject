@@ -2,7 +2,7 @@
 
 namespace UnitTestProject2.WebObjects
 {
-    class BasePage
+    public class BasePage
     {
         protected By _titlelocator;
         protected string _title;
