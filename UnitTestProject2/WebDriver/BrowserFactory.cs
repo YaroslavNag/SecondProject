@@ -27,6 +27,8 @@ namespace UnitTestProject2.WebDriver
                         var service = ChromeDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject1\UnitTestProject1\bin\Debug\netcoreapp2.1");
                         var option = new ChromeOptions();
                         option.AddArgument("disable-infobars");
+                        option.AddExcludedArgument("enable-automation");
+                        option.AddAdditionalCapability("useAutomationExtension", false);
                         driver = new ChromeDriver(service, option, TimeSpan.FromSeconds(timeOutSec));
                         break;
                     }
