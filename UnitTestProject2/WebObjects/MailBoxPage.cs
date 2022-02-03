@@ -14,7 +14,7 @@ namespace UnitTestProject2.WebObjects
         private readonly BaseElement _newletterbutton = new BaseElement(By.XPath("//a[@href='/compose/']"));
         private readonly BaseElement _lettertofield = new BaseElement(By.XPath("//div[@data-type='to']//input"));
         private readonly BaseElement _lettersubjectfield = new BaseElement(By.XPath("//input[@name='Subject']"));
-        private readonly BaseElement _lettertextfield = new BaseElement(By.XPath("//div[@role='textbox']/div"));
+        private readonly BaseElement _lettertextfield = new BaseElement(By.XPath("//div[@role='textbox']"));
         private readonly BaseElement _lettersavebutton = new BaseElement(By.XPath("//span[@title='Сохранить']"));
         private readonly BaseElement _accountbutton = new BaseElement(By.XPath("//div[@data-testid='whiteline-account']"));
         private readonly BaseElement _logoutbutton = new BaseElement(By.XPath("//a[@href='//auth.mail.ru/cgi-bin/logout?next=1&lang=ru_RU&page=https%3A%2F%2Fmail.ru%2F%3Ffrom%3Dlogout']"));
