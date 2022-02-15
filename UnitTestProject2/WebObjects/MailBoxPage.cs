@@ -41,7 +41,7 @@ namespace UnitTestProject2.WebObjects
             _draftletters.Click();
             BaseElement draftlettersellection = new BaseElement(By.XPath("//span[@class='ll-sj__normal'][text()='"+lettersubject+ "']/../../../../../../div[@class='llc__avatar']/div"));
             draftlettersellection.Click();
-            _draftletterdelete.Click();
+            _draftletterdelete.Click();    
             
         }
     }

@@ -28,7 +28,7 @@ namespace UnitTestProject2.WebDriver
                         var option = new ChromeOptions();
                         option.AddArgument("disable-infobars");
                         option.AddExcludedArgument("enable-automation");
-                        option.AddAdditionalCapability("useAutomationExtension", false);
+                        option.AddAdditionalOption("useAutomationExtension", false);
                         driver = new ChromeDriver(service, option, TimeSpan.FromSeconds(timeOutSec));
                         break;
                     }

@@ -1,8 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
 using UnitTestProject2.WebObjects;
+
 
 namespace UnitTestProject2
 {
@@ -21,6 +19,7 @@ namespace UnitTestProject2
         public void LoginAndCreatLetter()
         {
             _mainpage = new MainPage();
+            _mainpage.LoginButton();
             _mainpage.LoginToMail(_login, _password);
             _mailboxpage = new MailBoxPage();
             _mailboxpage.CreateAndSaveLetter(_letterto, _lettersubject, _lettertext);
@@ -31,6 +30,7 @@ namespace UnitTestProject2
         public void LoginAndDeleteLetter()
         {
             _mainpage = new MainPage();
+            _mainpage.LoginButton();
             _mainpage.LoginToMail(_login, _password);
             _mailboxpage = new MailBoxPage();
             _mailboxpage.DeleteDraftLetter(_lettersubject);

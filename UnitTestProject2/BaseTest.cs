@@ -1,10 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using System.Text;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UnitTestProject2.WebDriver;
 
 namespace UnitTestProject2
@@ -12,6 +6,8 @@ namespace UnitTestProject2
     public class BaseTest
     {
         protected static Browser Browser = Browser.Instance;
+
+        public TestContext TestContext { get; set; }
 
         [TestInitialize]
         public virtual void InitTest()
