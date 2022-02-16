@@ -2,9 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
-
 
 namespace UnitTestProject2.WebDriver
 {
@@ -24,7 +21,7 @@ namespace UnitTestProject2.WebDriver
             {
                 case BrowserType.Chrome:
                     {
-                        var service = ChromeDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject2\UnitTestProject2\bin\Debug\netcoreapp2.1");
+                        var service = ChromeDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject2\UnitTestProject2\bin\Debug\net47");
                         var option = new ChromeOptions();
                         option.AddArgument("disable-infobars");
                         option.AddExcludedArgument("enable-automation");
@@ -34,7 +31,7 @@ namespace UnitTestProject2.WebDriver
                     }
                 case BrowserType.Firefox:
                     {
-                        var service = FirefoxDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject2\UnitTestProject2\bin\Debug\netcoreapp2.1");
+                        var service = FirefoxDriverService.CreateDefaultService(@"D:\Automation\UnitTestProject2\UnitTestProject2\bin\Debug\net47");
                         var option = new FirefoxOptions();
                         driver = new FirefoxDriver(service, option, TimeSpan.FromSeconds(timeOutSec));
                         break;

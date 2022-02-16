@@ -1,7 +1,5 @@
 ﻿using UnitTestProject2.WebDriver;
-using System;
 using OpenQA.Selenium;
-
 
 namespace UnitTestProject2.WebObjects
 {

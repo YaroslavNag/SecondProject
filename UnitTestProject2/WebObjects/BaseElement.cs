@@ -47,7 +47,7 @@ namespace UnitTestProject2.WebObjects
 
         public void WaitForIsVisible()
         {
-           new WebDriverWait(Browser.GetDriver(), TimeSpan.FromSeconds(Browser._timeoutForElement)).Until(ExpectedConditions.ElementIsVisible(_locator));
+                new WebDriverWait(Browser.GetDriver(), TimeSpan.FromSeconds(Browser._timeoutForElement)).Until(ExpectedConditions.ElementIsVisible(_locator));
         }
 
         public IWebElement FindElement(By @by)
@@ -123,6 +123,20 @@ namespace UnitTestProject2.WebObjects
         public bool Selected { get; }
         public Point Location { get; }
         public Size Size { get; }
-        public bool Displayed { get; }
+        public bool Displayed
+        {
+            get
+            {
+                try
+                {
+                    Browser.GetDriver().FindElement(_locator);
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+                return true;
+                } 
+        }
     }
 }
