@@ -79,7 +79,7 @@ namespace UnitTestProject2
             {
             new Foo { subject = sub, number = num },
             };
-            //Не смог сделать неполный путь тк он постоянно лезит в папку TestResults которую я не могу отключить, чтобы она вообще не создавалась
+            //I couldn’t make an incomplete path because it constantly climbs into the TestResults folder, which I cannot disable
             using (var writer = new StreamWriter(@"D:\Automation\UnitTestProject2\UnitTestProject2\Resources\Subject.csv"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
