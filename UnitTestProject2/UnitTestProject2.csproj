@@ -31,7 +31,7 @@
     <None Update="Resources\Mess.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\zad3.csv">
+    <None Update="Resources\Subject.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

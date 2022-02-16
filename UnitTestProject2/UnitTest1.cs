@@ -63,12 +63,12 @@ namespace UnitTestProject2
             _mainpage.LoginToMail(_login, _password);
             _mailboxpage = new MailBoxPage();
             var subject = TestContext.DataRow["subject"].ToString();
-            int num = Int32.Parse(TestContext.DataRow["num"].ToString());
-            num += 1;
-            _mailboxpage.SendLetter(_login, subject, "texttext", num);
-            CsvWrite(subject, num);
-            _mailboxpage.SendedMessages(subject, num);
-            _mailboxpage.InboxMessages(subject, num);
+            int number = Int32.Parse(TestContext.DataRow["number"].ToString());
+            number += 1;
+            _mailboxpage.SendLetter(_login, subject, "texttext", number);
+            CsvWrite(subject, number);
+            _mailboxpage.SendedMessages(subject, number);
+            _mailboxpage.InboxMessages(subject, number);
             _mailboxpage.Logout();
         }
 
